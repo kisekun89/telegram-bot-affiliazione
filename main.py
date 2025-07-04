@@ -27,3 +27,9 @@ def pubblica_offerte():
 while True:
     pubblica_offerte()
     time.sleep(FREQUENZA_MINUTI * 60)
+        except Exception as e:
+            print(f"❌ Errore su {canale}: {e}")
+
+while True:
+    pubblica_offerte()
+    time.sleep(FREQUENZA_MINUTI * 60)
