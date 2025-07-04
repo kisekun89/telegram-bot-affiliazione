@@ -4,7 +4,7 @@ import telebot
 
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 CANALI = os.getenv("CANALI", "").split(",")
-FREQUENZA_MINUTI = int(os.getenv("FREQUENZA_MINUTI", "60").strip())
+FREQUENZA_MINUTI = int(os.getenv("FREQUENZA_MINUTI", "60").strip().replace("\n", "").replace("=", ""))
 TIPO_LINK_SVAPO = os.getenv("TIPO_LINK_SVAPO", "svapostore")
 
 bot = telebot.TeleBot(BOT_TOKEN)
